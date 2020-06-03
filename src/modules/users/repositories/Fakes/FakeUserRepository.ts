@@ -5,7 +5,7 @@ import ICreateUserDTO from '@modules/users/dtos/ICreateUserDTO';
 
 import User from '../../infra/typeorm/entities/User';
 
-class UsersRespository implements IUsersRepository {
+class FakeUsersRespository implements IUsersRepository {
   
   private users: User[] = [];
 
@@ -41,4 +41,4 @@ class UsersRespository implements IUsersRepository {
   }
 }
 
-export default UsersRespository;
+export default FakeUsersRespository;
