@@ -6,7 +6,7 @@ import ICreateAppointmentDTOP from '@modules/appointments/dtos/ICreateAppointmen
 
 import Appointment from '../../infra/typeorm/entities/Appointment';
 
-class AppointmentRespository implements IAppointmentsRepository {
+class AppointmentRepository implements IAppointmentsRepository {
 
   private appointments: Appointment[] = [];
 
@@ -32,4 +32,4 @@ class AppointmentRespository implements IAppointmentsRepository {
   }
 }
 
-export default AppointmentRespository;
+export default AppointmentRepository;
