@@ -2,16 +2,20 @@ import AppError from '@shared/errors/AppError';
 
 import FakeUserRepository from '@modules/users/repositories/Fakes/FakeUserRepository';
 import ListProvidersServices from './ListProvidersServices';
+import FakeCacheProvider from '@shared/container/providers/CachProvider/fakes/FakeCacheProvider';
 
 let fakeUserRepository: FakeUserRepository;
 let listProviders: ListProvidersServices;
+let fakeCacheProvider: FakeCacheProvider;
 
 describe('ListProviders', () => {
   beforeEach(() => {
     fakeUserRepository = new FakeUserRepository();
-  
+    fakeCacheProvider = new FakeCacheProvider();
+
     listProviders = new ListProvidersServices(
       fakeUserRepository,
+      fakeCacheProvider,
     );
   });
 
